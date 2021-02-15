@@ -1,5 +1,14 @@
 import React from "react";
 
-function Navbar() {};
+// import react-bootstrap components
+import Navbar from "react-bootstrap/Navbar";
 
-export default Navbar;
+function Nav() {
+  return (
+    <Navbar bg="light" expand="lg">
+      <Navbar.Brand href="#home">Project FOCUS</Navbar.Brand>
+    </Navbar>
+  );
+}
+
+export default Nav;

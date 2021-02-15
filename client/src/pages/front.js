@@ -1,12 +1,12 @@
 import React from "react";
 
 // import components
-import Navbar from "../components/navbar"
+import Nav from "../components/navbar"
 
 function Front() {
     return(
         <>
-        <Navbar />
+        <Nav />
         <h1>hey whats up hello</h1>
         </>
     )
