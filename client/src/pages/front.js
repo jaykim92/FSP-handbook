@@ -1,15 +1,17 @@
 import React from "react";
 
 // import components
-import Navbar from "../components/navbar"
+import StickyNav from "../components/navbar";
+import SideBar from "../components/sideBar";
 
 function Front() {
-    return(
-        <>
-        <Navbar />
-        <h1>hey whats up hello</h1>
-        </>
-    )
-};
+  return (
+    <>
+      <StickyNav />
+      <SideBar />
+      <h1>test front page content</h1>
+    </>
+  );
+}
 
 export default Front;

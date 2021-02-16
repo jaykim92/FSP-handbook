@@ -1,10 +1,30 @@
-import './App.css';
-import Front from "./pages/front"
+import React from "react";
+import "./App.css";
+
+// import page components
+import Front from "./pages/front";
+import Handbook from "./pages/handbook";
+import Links from "./pages/links";
+
+// import react-router-dom
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-    <Front />
+      <Router>
+          <Switch>
+            <Route path="/handbook">
+              <Handbook />
+            </Route>
+            <Route path="/links">
+              <Links />
+            </Route>
+            <Route path="/">
+              <Front />
+            </Route>
+          </Switch>
+      </Router>
     </div>
   );
 }
