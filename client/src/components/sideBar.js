@@ -1,14 +1,13 @@
-import React from 'react';
-import Nav from "react-bootstrap/Nav";
+import React from "react";
+
+
 
 function SideBar() {
-    return(
-        <Nav className="flex-column">
-            <Nav.Item>
-                <Nav.Link>Introduction</Nav.Link>
-            </Nav.Item>
-        </Nav>
-    );
-};
+  return (
+    <>
+
+    </>
+  );
+}
 
 export default SideBar;
