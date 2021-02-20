@@ -11,7 +11,7 @@ import Button from 'react-bootstrap/Button'
 
 function StickyNav() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" sticky="top">
       <Navbar.Brand href="/">Project FOCUS</Navbar.Brand>
       <Navbar.Toggle aria-controls="searchbar" />
       <Navbar.Collapse id="searchbar">
