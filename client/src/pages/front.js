@@ -8,21 +8,45 @@ import SideBar from "../components/sideBar";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
 
 function Front() {
   return (
-    <>
+    <div>
       <StickyNav />
-      <Container fluid>
+      <Container fluid style={{ marginTop: "2rem" }}>
         <Row>
-          <Col fixed="top">test table of contents</Col>
-          <Col xs={8}>
-            <h1>test content</h1>
+          <Col xs={12} md={8}>
+            <h1 style={{ fontSize: "6rem", marginLeft: "1rem" }}>
+              Project FOCUS
+            </h1>
+            <Row style={{ paddingLeft: "2rem" }}>
+              <p style={{ fontSize: "1.5rem" }}>
+                For Our Children's Ultimate Success
+              </p>
+            </Row>
+            <Row style={{ paddingLeft: "2rem" }}>
+              <p style={{ fontSize: "1.5rem" }}>Employee Handbook</p>
+            </Row>
+            <Row style={{ paddingLeft: "2rem" }}>
+              <Button href="#" className="mx-1">
+                Get Started
+              </Button>
+              <Button href="#" className="mx-1">
+                Other Resources
+              </Button>
+            </Row>
           </Col>
-          <Col>test sidebar</Col>
+          <Col xs={12} md={4}>
+            <img
+              src="https://picsum.photos/id/400/400/400"
+              alt=""
+              style={{ maxWidth: "100%" }}
+            ></img>
+          </Col>
         </Row>
       </Container>
-    </>
+    </div>
   );
 }
 
