@@ -2,6 +2,12 @@ import React from "react";
 
 // import components
 import StickyNav from "../components/navbar";
+import HandbookContent from "../components/handbookContent";
+import TableOfContents from "../components/tableOfContents";
+
+// import utils
+import handbook from "../utils/handbook.json";
+import tableOfContents from "../utils/tableOfContents.json";
 
 // import react-bootstrap components
 import Container from "react-bootstrap/Container";
@@ -14,9 +20,13 @@ function Handbook() {
       <StickyNav />
       <Container fluid>
         <Row>
-          <Col fixed="top">test table of contents</Col>
-          <Col xs={8} style={{marginTop: "2rem"}}>
-            <h1>test content</h1>
+          <Col fixed="top">
+              {tableOfContents.map((item, i) => (
+                  <TableOfContents key={i} data={item}/>
+              ))}   
+          </Col>
+          <Col xs={8} style={{ marginTop: "2rem" }}>
+                <HandbookContent />
           </Col>
           <Col>test sidebar</Col>
         </Row>
