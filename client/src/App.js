@@ -5,6 +5,7 @@ import "./App.css";
 import Front from "./pages/front";
 import Handbook from "./pages/handbook";
 import Links from "./pages/links";
+import Search from "./pages/search";
 
 // import react-router-dom
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -19,6 +20,9 @@ function App() {
             </Route>
             <Route path="/links">
               <Links />
+            </Route>
+            <Route path="/search">
+              <Search />
             </Route>
             <Route path="/">
               <Front />
