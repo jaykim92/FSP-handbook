@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/Button'
 
 // import reactbootstrap
 
-function StickyNav() {
+function StickyNav({keyword, setKeyword}) {
   return (
     <Navbar bg="light" expand="lg" sticky="top">
       <Navbar.Brand href="/">Project FOCUS</Navbar.Brand>
@@ -17,13 +17,13 @@ function StickyNav() {
       <Navbar.Collapse id="searchbar">
         <Nav className="mr-auto">
           <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="handbook">Handbook</Nav.Link>
-          <Nav.Link href="links">Links</Nav.Link>
+          <Nav.Link href="/handbook/introduction">Handbook</Nav.Link>
+          <Nav.Link href="/links">Links</Nav.Link>
         </Nav>
         <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+          <FormControl type="text" placeholder="Search a topic" className="mr-sm-2" value={keyword} onChange={(e) => setKeyword(e.target.value)}/>
         </Form>
-        <Button variant="outline-success">Search</Button>
+        <Button variant="outline-success"><a href="/search" style={{color: "green"}}>Search</a></Button>
       </Navbar.Collapse>
     </Navbar>
   );

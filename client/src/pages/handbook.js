@@ -6,7 +6,6 @@ import HandbookContent from "../components/handbookContent";
 import TableOfContents from "../components/tableOfContents";
 
 // import utils
-import handbook from "../utils/handbook.json";
 import tableOfContents from "../utils/tableOfContents.json";
 
 // import react-bootstrap components
@@ -16,22 +15,22 @@ import Col from "react-bootstrap/Col";
 
 function Handbook() {
   return (
-    <>
+    <div>
       <StickyNav />
       <Container fluid>
         <Row>
-          <Col fixed="top">
-              {tableOfContents.map((item, i) => (
-                  <TableOfContents key={i} data={item}/>
-              ))}   
+          <Col xs={2} fixed="top">
+            {tableOfContents.map((item, i) => (
+              <TableOfContents key={i} data={item} />
+            ))}
           </Col>
-          <Col xs={8} style={{ marginTop: "2rem" }}>
-                <HandbookContent />
+          <Col xs={8} style={{ marginTop: "2rem", height: "88vh", overflow: "scroll"}}>
+            <HandbookContent />
           </Col>
-          <Col>test sidebar</Col>
+          <Col xs={2}>test sidebar</Col>
         </Row>
       </Container>
-    </>
+    </div>
   );
 }
 

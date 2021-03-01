@@ -1,11 +1,23 @@
-import React from 'react';
+import React from "react";
 
-function Introduction() {
-    return(
-        <div>
-            <h1>intro page test</h1>
-        </div>
-    );
-};
+// import react-bootstrap components
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+
+function Introduction({ data }) {
+  return (
+    <div style={{overflow: "scroll"}}>
+      <Container>
+        <Row>
+          <h3 id={data.sectionTitle}>{data.sectionTitle}</h3>
+        </Row>
+        <Row>
+          <p>{data.content}</p>
+        </Row>
+      </Container>
+    </div>
+  );
+}
 
 export default Introduction;
