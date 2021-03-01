@@ -24,7 +24,10 @@ function Handbook() {
               <TableOfContents key={i} data={item} />
             ))}
           </Col>
-          <Col xs={8} style={{ marginTop: "2rem", height: "88vh", overflow: "scroll"}}>
+          <Col
+            xs={8}
+            style={{ marginTop: "2rem", height: "88vh", overflow: "scroll" }}
+          >
             <HandbookContent />
           </Col>
           <Col xs={2}>test sidebar</Col>
