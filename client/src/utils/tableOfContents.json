@@ -1,0 +1,7 @@
+[
+  { "sectionTitle": "Introduction", "path": "introduction" },
+  { "sectionTitle": "Roles and Responsibilities", "path": "roles-and-responsibilities" },
+  { "sectionTite": "Phases of Treatment", "path": "phases-of-treatment" },
+  { "sectionTitle": "Electronic Health Records Systems", "path": "EHR" },
+  { "sectionTitle": "Data Collection and Reporting", "path": "data-collection" }
+]
