@@ -9,7 +9,7 @@ function TableOfContents({ data }) {
     <div>
       <Navbar>
         <Nav>
-          <Nav.Link href={`/handbook/${data.path}`}>
+          <Nav.Link href={`/handbook${data.path}`}>
             {data.sectionTitle}
           </Nav.Link>
         </Nav>
