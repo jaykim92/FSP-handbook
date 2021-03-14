@@ -1,8 +1,8 @@
 import React from "react";
 
 // import the different handbook content pages
-import Introduction from "../pages/introduction";
-import Search from "../pages/search";
+import Introduction from "./introduction";
+import Search from "./search";
 
 
 // import text from utils

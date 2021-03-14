@@ -1,26 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-// import axios call from utils folder
-import API from "../utils/API";
-
-function SearchResults() {
-  // setting blank initial state
-  const [articles, setArticles] = useState([]);
-
-  // load all articles using setArticles
-  useEffect(() => {
-    loadArticles();
-  }, []);
-
-  // define loadArticles function
-  function loadArticles() {
-    API.getArticle()
-      .then(res => setArticles(res.data))
-      .catch(err => console.log(err));
-  }
-
+// function passing through data that is deconstructed
+function SearchResults({ title, tags, content }) {
   return (
-    <div>{articles.length ? <p>{articles}</p> : <p>nothing to display</p>}</div>
+    <>
+      <a href={tags}>{title}</a>
+      <p>{content}</p>
+    </>
   );
 }
 

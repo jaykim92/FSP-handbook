@@ -1,7 +1,9 @@
 import axios from "axios";
 
-function getArticle(id) {
-  return axios.get("/hello");
+const functions = {
+  getArticles(query) {
+    return axios.get("/api/articles", { params: { q: query } });
+  }
 };
 
-export default getArticle;
+export default functions;
