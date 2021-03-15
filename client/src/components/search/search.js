@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // import axios call from utils folder
-import API from "../utils/API";
+import API from "../../utils/API";
 
 // import component for search results
 import SearchResults from "./searchResults";
@@ -59,7 +59,7 @@ function Search() {
             <SearchResults
               key={article.title}
               title={article.title}
-              tags={article.tags}
+              tag={article.tag}
               content={article.content}
             />
           );

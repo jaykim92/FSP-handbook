@@ -9,7 +9,14 @@ const articleSeed = [
   {
     title: "Introduction",
     content: "lorem ipsum blah blah",
-    tag: "#introduction"
+    tag: "#introduction",
+    category: "introduction"
+  },
+  {
+    title: "Your first day",
+    content: "on your first day you will want to locate emergency exits",
+    tag: "#first day",
+    category: "introduction"
   },
   { title: "test", content: "test please work", tag: "#test" }
 ];

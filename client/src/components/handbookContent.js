@@ -1,8 +1,8 @@
 import React from "react";
 
 // import the different handbook content pages
-import Introduction from "./introduction";
-import Search from "./search";
+import Introduction from "./introduction/introduction";
+import Search from "./search/search";
 
 
 // import text from utils
@@ -17,10 +17,10 @@ function HandbookContent() {
       <Router>
         <Switch>
           <Route path="/handbook/introduction">
-            <h1>Introduction to Program Goals and Services</h1>
-            {introductionText.map((item, i) => (
+            {/* {introductionText.map((item, i) => (
               <Introduction key={i} data={item} />
-            ))}
+            ))} */}
+            <Introduction />
           </Route>
           <Route path="/handbook/roles-and-responsibilities"></Route>
           <Route path="/handbook/phases-of-treatment"></Route>
