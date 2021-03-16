@@ -11,6 +11,7 @@ import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container";
 
 function Search() {
   // set up hooks
@@ -33,7 +34,7 @@ function Search() {
   };
 
   return (
-    <div>
+    <div className="mt-4">
       <Row>
         <Form inline>
           <FormControl
@@ -53,18 +54,21 @@ function Search() {
         </Form>
       </Row>
 
-      <Row>
-        {articles.map(article => {
-          return (
-            <SearchResults
-              key={article.title}
-              title={article.title}
-              tag={article.tag}
-              content={article.content}
-            />
-          );
-        })}
-      </Row>
+      <Container className="mt-5">
+        <Row>
+            {articles.map(article => {
+              return (
+                <SearchResults
+                  key={article.title}
+                  title={article.title}
+                  tag={article.tag}
+                  content={article.content}
+                  category={article.category}
+                />
+              );
+            })}
+        </Row>
+      </Container>
     </div>
   );
 }

@@ -18,7 +18,7 @@ const articleSeed = [
     tag: "#first day",
     category: "introduction"
   },
-  { title: "test", content: "test please work", tag: "#test" }
+  { title: "intro test", content: "test please work", tag: "#intro test" }
 ];
 
 db.Article.remove({})

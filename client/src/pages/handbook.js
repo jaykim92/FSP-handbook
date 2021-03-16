@@ -26,7 +26,7 @@ function Handbook() {
           </Col>
           <Col
             xs={8}
-            style={{ marginTop: "2rem", height: "88vh", overflow: "scroll" }}
+            style={{height: "92vh", overflowY: "scroll" }}
           >
             <HandbookContent />
           </Col>

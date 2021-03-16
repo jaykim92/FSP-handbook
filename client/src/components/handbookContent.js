@@ -4,10 +4,6 @@ import React from "react";
 import Introduction from "./introduction/introduction";
 import Search from "./search/search";
 
-
-// import text from utils
-import introductionText from "../utils/introductionText.json";
-
 // import react-router-dom
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -17,9 +13,6 @@ function HandbookContent() {
       <Router>
         <Switch>
           <Route path="/handbook/introduction">
-            {/* {introductionText.map((item, i) => (
-              <Introduction key={i} data={item} />
-            ))} */}
             <Introduction />
           </Route>
           <Route path="/handbook/roles-and-responsibilities"></Route>
