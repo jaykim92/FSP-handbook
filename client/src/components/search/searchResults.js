@@ -6,10 +6,10 @@ import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 
 // function passing through data that is deconstructed
-function SearchResults({ title, tag, content, category }) {
+function SearchResults({ title, content, category, href }) {
   return (
     <Col className="mt-3">
-      <a href={`/handbook/${category}`}>
+      <a href={`/handbook/${category}/#${href}`}>
         <Card style={{ width: "60%", height: "100%", overflow: "hidden" }}>
           <Card.Body>
             <Card.Title>{title}</Card.Title>

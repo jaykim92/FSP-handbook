@@ -61,9 +61,9 @@ function Search() {
                 <SearchResults
                   key={article.title}
                   title={article.title}
-                  tag={article.tag}
                   content={article.content}
                   category={article.category}
+                  href={article.href}
                 />
               );
             })}

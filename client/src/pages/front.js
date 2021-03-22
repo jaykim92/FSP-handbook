@@ -2,7 +2,6 @@ import React from "react";
 
 // import components
 import StickyNav from "../components/navbar";
-import SideBar from "../components/sideBar";
 
 // import react-bootstrap components
 import Container from "react-bootstrap/Container";

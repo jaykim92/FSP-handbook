@@ -12,6 +12,7 @@ import tableOfContents from "../utils/tableOfContents.json";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Nav from "react-bootstrap/Nav";
 
 function Handbook() {
   return (
@@ -20,17 +21,15 @@ function Handbook() {
       <Container fluid>
         <Row>
           <Col xs={2} fixed="top">
-            {tableOfContents.map((item, i) => (
-              <TableOfContents key={i} data={item} />
-            ))}
+              <Nav>
+                {tableOfContents.map((item, i) => (
+                  <TableOfContents key={i} data={item} />
+                ))}
+              </Nav>
           </Col>
-          <Col
-            xs={8}
-            style={{height: "92vh", overflowY: "scroll" }}
-          >
+          <Col xs={10} style={{ height: "92vh", overflowY: "scroll" }}>
             <HandbookContent />
           </Col>
-          <Col xs={2}>test sidebar</Col>
         </Row>
       </Container>
     </div>

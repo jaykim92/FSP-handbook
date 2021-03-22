@@ -6,7 +6,7 @@ const db = require("../models");
 // this will display on button click using the user's search paramaters
 router.get("/articles", (req, res) => {
   db.Article.find({
-    tag: { $regex: new RegExp(req.query.q, "i") }
+    content: { $regex: new RegExp(req.query.q, "i") }
   })
     .then(articles => res.json(articles))
     .catch(err => res.status(422).end());

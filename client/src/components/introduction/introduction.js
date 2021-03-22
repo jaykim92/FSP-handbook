@@ -1,61 +1,60 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-
-// import axios call from utils folder
-import API from "../../utils/API";
+import axios from "axios";
 
 // import component for search results
 import IntroductionResults from "./introductionResults";
+import SideBar from "./sideBar";
 
 // import react-bootstrap components
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import axios from "axios";
-
-// function Introduction({data}) {
-
-//   return (
-//     <div>
-//       <Container>
-//         <Row>
-//           <h3 id={data.sectionTitle}>{data.sectionTitle}</h3>
-//         </Row>
-//         <Row>
-//           <p>{data.content}</p>
-//         </Row>
-//       </Container>
-//     </div>
-//   );
-// }
+import Col from "react-bootstrap/Col";
+import Nav from "react-bootstrap/Nav";
 
 function Introduction() {
   const [articles, setArticles] = useState([]);
 
-  // When this component mounts, grab article with title introduction
+  // When this component mounts, grab article with the category introduction
   useEffect(() => {
     axios
       .get("/api/article?q=introduction")
-      .then((res) => {
-        setArticles(res.data)})
+      .then(res => {
+        setArticles(res.data);
+      })
       .catch(err => console.log(err));
   }, []);
 
-  console.log(articles)
+  console.log(articles);
   return (
-    <Container>
-      <h2>Introduction to Program Services</h2>
+    <Container className="mt-1">
       <Row>
-        <p>hello</p>
-        {articles.map(article => {
-          return (
-            <IntroductionResults
-              key={article.title}
-              title={article.title}
-              tag={article.tag}
-              content={article.content}
-            />
-          );
-        })}
+        <Col xs={10} style={{overflow: "scroll"}}>
+          <h2>Introduction to Program Services</h2>
+          {articles.map(article => {
+            return (
+              <IntroductionResults
+                key={article.title}
+                title={article.title}
+                content={article.content}
+                href={article.href}
+              />
+            );
+          })}
+        </Col>
+
+        <Col xs={2}>
+          <Nav className="sticky-top">
+            {articles.map(article => {
+              return (
+                <SideBar
+                  key={article.title}
+                  title={article.title}
+                  href={article.href}
+                />
+              );
+            })}
+          </Nav>
+        </Col>
       </Row>
     </Container>
   );

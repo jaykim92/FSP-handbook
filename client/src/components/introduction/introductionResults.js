@@ -1,11 +1,11 @@
 import React from "react";
 
 // function passing through data that is deconstructed
-function SearchResults({ title, tag, content }) {
+function SearchResults({ title, content, href }) {
   return (
     <>
-      <a href={tag}>{title}</a>
-      <p>{content}</p>
+      <h5>{title}</h5>
+      <p id={href}>{content}</p>
     </>
   );
 }
