@@ -4,8 +4,8 @@ import React from "react";
 function SearchResults({ title, content, href }) {
   return (
     <>
-      <h5>{title}</h5>
-      <p id={href}>{content}</p>
+      <h5 id={href}>{title}</h5>
+      <p>{content}</p>
     </>
   );
 }

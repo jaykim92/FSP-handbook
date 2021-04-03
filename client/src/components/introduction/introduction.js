@@ -10,6 +10,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Nav from "react-bootstrap/Nav";
+import {BrowserRouter as Router} from "react-router-dom";
 
 function Introduction() {
   const [articles, setArticles] = useState([]);
@@ -24,16 +25,15 @@ function Introduction() {
       .catch(err => console.log(err));
   }, []);
 
-  console.log(articles);
   return (
     <Container className="mt-1">
       <Row>
         <Col xs={10} style={{overflow: "scroll"}}>
           <h2>Introduction to Program Services</h2>
-          {articles.map(article => {
+          {articles.map((article, i) => {
             return (
               <IntroductionResults
-                key={article.title}
+                key={i}
                 title={article.title}
                 content={article.content}
                 href={article.href}
@@ -44,10 +44,10 @@ function Introduction() {
 
         <Col xs={2}>
           <Nav className="sticky-top">
-            {articles.map(article => {
+            {articles.map((article, i) => {
               return (
                 <SideBar
-                  key={article.title}
+                  key={i}
                   title={article.title}
                   href={article.href}
                 />

@@ -3,13 +3,13 @@ import React from "react";
 // import react-bootstrap components
 import { NavLink } from "react-router-dom";
 
-function SideBar({title, tag, href}) {
+function SideBar({title, href}) {
   return (
     <>
       <NavLink
-        to={`/handbook/introduction/#${href}`}
+        to={`/handbook/introduction/#test`}
         className="text-muted"
-        activeClassName="active"
+        activeClassName="is-active"
       >
         {title}
       </NavLink>
