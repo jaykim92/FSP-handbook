@@ -5,7 +5,7 @@ import Introduction from "./introduction/introduction";
 import Search from "./search/search";
 
 // import react-router-dom
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 function HandbookContent() {
   return (

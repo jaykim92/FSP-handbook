@@ -13,14 +13,12 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Nav from "react-bootstrap/Nav";
-import { BrowserRouter as Router } from "react-router-dom";
 
 function Handbook() {
   return (
     <div>
       <StickyNav />
       <Container fluid>
-        <Router>
           <Row>
             <Col xs={2} fixed="top">
               <Nav>
@@ -33,7 +31,6 @@ function Handbook() {
               <HandbookContent />
             </Col>
           </Row>
-        </Router>
       </Container>
     </div>
   );
