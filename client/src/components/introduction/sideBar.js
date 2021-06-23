@@ -1,19 +1,22 @@
 import React from "react";
 
 // import react-bootstrap components
-import { NavLink } from "react-router-dom";
+import Col from "react-bootstrap/Col";
+import { HashLink as Link } from "react-router-hash-link";
 
-function SideBar({title, href}) {
+function SideBar({ title, href }) {
   return (
-    <>
-      <NavLink
-        to={`/handbook/introduction/#test`}
-        className="text-muted"
-        activeClassName="is-active"
-      >
-        {title}
-      </NavLink>
-    </>
+    <div>
+      <Col xs={12}>
+          <Link
+            exact
+            to={`/handbook/introduction/#${href}`}
+            className="text-muted"
+          >
+            {title}
+          </Link>
+      </Col>
+    </div>
   );
 }
 

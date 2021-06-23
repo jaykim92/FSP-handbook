@@ -14,6 +14,7 @@ function StickyNav() {
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/handbook">Handbook</Nav.Link>
           <Nav.Link href="/links">Links</Nav.Link>
+          <Nav.Link href="/handbook">Search</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

@@ -7,6 +7,7 @@ import Handbook from "./pages/handbook";
 import Links from "./pages/links";
 
 // import react-router-dom
+// note: put router at top level and only use once
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
