@@ -1,20 +1,19 @@
 import React from "react";
 
 // import react-bootstrap components
-import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import { NavLink } from "react-router-dom";
+import Col from "react-bootstrap/Col";
+import { BrowserRouter as Router } from "react-router-dom";
+
 
 function TableOfContents({ data }) {
   return (
-    <div>
-      <Navbar>
-        <Nav>
-          <Nav.Link href={`/handbook/${data.path}`}>
-            {data.sectionTitle}
-          </Nav.Link>
-        </Nav>
-      </Navbar>
-    </div>
+    <Col xs={12}>
+        <NavLink exact to={`/handbook${data.path}/`}>
+          {data.sectionTitle}
+        </NavLink>
+    </Col>
   );
 }
 
