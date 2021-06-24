@@ -30,7 +30,7 @@ function Introduction() {
       className="mt-1"
     >
       <Row>
-        <Col xs={10} style={{ overflow: "scroll" }}>
+        <Col xs={10} style={{ overflow: "hidden" }}>
           <h2>Introduction to Program Services</h2>
           {articles.map((article, i) => {
             return (
