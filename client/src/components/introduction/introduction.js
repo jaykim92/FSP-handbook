@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-// import component for search results
+// import component for getting data from backend
 import IntroductionResults from "./introductionResults";
 import SideBar from "./sideBar";
 
@@ -26,9 +26,7 @@ function Introduction() {
   }, []);
 
   return (
-    <Container
-      className="mt-1"
-    >
+    <Container className="mt-1">
       <Row>
         <Col xs={10} style={{ overflow: "hidden" }}>
           <h2>Introduction to Program Services</h2>
@@ -39,6 +37,7 @@ function Introduction() {
                 title={article.title}
                 content={article.content}
                 href={article.href}
+                section={article.section}
               />
             );
           })}

@@ -11,7 +11,8 @@ const articleSeed = [
     content:
       "This handbook was written to archive standardized procedures that are often used in our program to guide your decision-making process. In this handbook you will see an overview of each person's role on our team and how these individual parts work together as a whole to provide high quality, culturally-competent services to program participants and their family members. While this handbook cannot teach you how to do your job, I hope it helps you to learn programmatic procedures and best practices. Throughout your employment at Project FOCUS, you will be consulting and working closely with your supervisors and colleagues to be the best service provider you can be.",
     category: "Introduction",
-    href: "intro"
+    href: "intro",
+    section: "Introduction - Preface"
   },
   {
     title: "Mission Statement",
@@ -101,7 +102,7 @@ const articleSeed = [
     title: "Intake from the Client's Perspective",
     content:
       "Brad’s school counselor noticed that he was in need of mental health services because Brad is at risk of failing school and has been harming himself. The school counselor thinks that Brad might need some therapy, rehab, parental support, housing support, and medication support. The school counselor often makes referrals to Project FOCUS for API students with severe mental illness. The counselor gave Project FOCUS’s number to Brad’s parents. The mother calls our main office inquiring about possibly receiving services at Project FOCUS. The intake coordinator picks up the phone and begins to fill out an initial referral form to gather and record as much information as possible regarding Brad’s mental health and his surrounding circumstances. After speaking with Brad’s mother over the phone, the intake coordinator thinks that Brad may be eligible to receive services at Project FOCUS. The two parties coordinate a time for Brad and his family to come to the office for a screening appointment to further assess eligibility.",
-    category: "treatment",
+    category: "phases-of-treatment",
     href: "client-intake"
   },
   {
@@ -123,10 +124,10 @@ const articleSeed = [
     href: "client-intake"
   },
   {
-    title: "",
-    content: "",
-    category: "",
-    href: ""
+    title: "How to: Intake",
+    content: "asdf",
+    category: "treatment",
+    href: "client-intake"
   },
 
 
