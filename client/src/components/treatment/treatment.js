@@ -1,24 +1,23 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-// import component for getting data from backend
-import IntroductionResults from "./introductionResults";
-import SideBar from "./sideBar";
+// import components for getting data from backend
+import TreatmentResults from "./treatmentResults";
+import TreatmentSideBar from "./sideBar";
 
-// import react-bootstrap components
+// import react-bootstrap comoponenets
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Nav from "react-bootstrap/Nav";
-import { NavLink } from "react-router-dom";
 
-function Introduction() {
+function Treatment() {
   const [articles, setArticles] = useState([]);
 
-  // When this component mounts, grab article with the category introduction
+  // when this component mounts, grab article with category/q = treatment
   useEffect(() => {
     axios
-      .get("/api/article?q=introduction")
+      .get("/api/article?q=treatment")
       .then(res => {
         setArticles(res.data);
       })
@@ -26,18 +25,17 @@ function Introduction() {
   }, []);
 
   return (
-    <Container className="mt-1">
+    <Container>
       <Row>
-        <Col xs={10} style={{ overflow: "hidden" }}>
-          <h2>Introduction to Program Services</h2>
+        <Col>
+          <h2>Phases of Treatment</h2>
           {articles.map((article, i) => {
             return (
-              <IntroductionResults
+              <TreatmentResults
                 key={i}
                 title={article.title}
                 content={article.content}
                 href={article.href}
-                section={article.section}
               />
             );
           })}
@@ -47,7 +45,11 @@ function Introduction() {
           <Nav className="sticky-top">
             {articles.map((article, i) => {
               return (
-                <SideBar key={i} title={article.title} href={article.href} />
+                <TreatmentSideBar
+                  key={i}
+                  title={article.title}
+                  href={article.href}
+                />
               );
             })}
           </Nav>
@@ -57,4 +59,4 @@ function Introduction() {
   );
 }
 
-export default Introduction;
+export default Treatment;

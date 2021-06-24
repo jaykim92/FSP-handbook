@@ -60,7 +60,7 @@ function Search() {
               return (
                 <SearchResults
                   key={article.title}
-                  title={article.title}
+                  section={article.section}
                   content={article.content}
                   category={article.category}
                   href={article.href}
